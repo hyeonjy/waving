@@ -21,6 +21,8 @@ export interface IGetMoviesResult {
 
 export function getMovies() {
   return fetch(
-    `${BASE_PATH}/movie/now_playing?api_key=${process.env.REACT_APP_API_KEY}`
+    `${BASE_PATH}/movie/now_playing?api_key=${process.env.REACT_APP_API_KEY}&language=ko-KR`
   ).then((response) => response.json());
 }
+
+//movie detail
